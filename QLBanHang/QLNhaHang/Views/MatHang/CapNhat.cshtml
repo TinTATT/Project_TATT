@@ -1,0 +1,49 @@
+﻿@model MatHang
+@{
+    QLNhaHangEntities db = new QLNhaHangEntities();
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">@(Model.MatHangID == 0 ? "Thêm mới mặt hàng" : "Cập nhật thông tin mặt hàng")</div>
+    <div class="panel-body">
+        <form style="margin-top:20px;display:inline-block" class="col-xs-12" method="post" enctype="multipart/form-data" action="@Url.Action("capnhat", "mathang", new { area = "" })">
+
+            <input type="hidden" name="MatHangID" value="@Model.MatHangID" />
+            <div class="form-group col-xs-12">
+                <label>Tên mặt hàng:</label>
+                <input type="text" class="col-xs-8 form-control" required name="TenMatHang" value="@Model.TenMatHang" />
+            </div>
+            <div class="form-group col-xs-12">
+                <label>Giá:</label>
+                <input type="text" class="col-xs-8 form-control" required name="Gia" value="@Model.Gia" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Loại hàng:</label>
+                <select name="LoaiHangID" class="form-control">
+
+                    <option value="">Chưa xác định</option>
+                    @foreach (var item in db.LoaiHangs)
+                    {
+                        <option @(Model.LoaiHangID == item.LoaiHangID ? "selected" : "") value="@item.LoaiHangID">@item.TenLoaiHang</option>
+                    }
+                </select>
+
+            </div>
+            <div class="form-group col-xs-6">
+                <label style="width:100%">Ảnh:</label>
+                <input type="file" name="AnhDaiDien" class="col-xs-12" />
+
+            </div>
+            <div class="form-group col-xs-6">
+
+                @if (Model.FileAnh != null)
+                {
+                    <img src="@Model.FileAnh" style="height:200px" />
+                }
+            </div>
+            <div class="col-xs-12" style="margin:20px">
+                <input class="pull-right btn btn-success" type="submit" value="Lưu thông tin" />
+
+            </div>
+        </form>
+    </div>
+</div>

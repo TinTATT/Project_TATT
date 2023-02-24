@@ -1,0 +1,21 @@
+﻿@model LoaiHang
+@{
+    QLNhaHangEntities db = new QLNhaHangEntities();
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">@(Model.LoaiHangID == 0 ? "Thêm mới loại hàng" : "Cập nhật thông tin loại hàng")</div>
+    <div class="panel-body">
+        <form style="margin-top:20px;display:inline-block" class="col-xs-12" method="post" enctype="multipart/form-data" action="@Url.Action("capnhat", "loaihang", new { area = "" })">
+
+            <input type="hidden" name="LoaiHangID" value="@Model.LoaiHangID" />
+            <div class="form-group col-xs-12">
+                <label>Tên mặt hàng:</label>
+                <input type="text" class="col-xs-8 form-control" required name="TenLoaiHang" value="@Model.TenLoaiHang" />
+            </div>
+            <div class="col-xs-12" style="margin:20px">
+                <input class="pull-right btn btn-success" type="submit" value="Lưu thông tin" />
+
+            </div>
+        </form>
+    </div>
+</div>

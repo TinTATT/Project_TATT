@@ -1,0 +1,51 @@
+﻿@model KhuyenMai
+@{ 
+    QLNhaHangEntities db = new QLNhaHangEntities();
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">@(Model.KhuyenMaiID == 0 ? "Thêm mới khuyến mại" : "Cập nhật thông tin khuyến mại")</div>
+    <div class="panel-body">
+        <form style="margin-top:20px;display:inline-block" class="col-xs-12" method="post" enctype="multipart/form-data" action="@Url.Action("capnhat", "khuyenmai", new { area = "" })">
+
+            <input type="hidden" name="KhuyenMaiID" value="@Model.KhuyenMaiID" />
+            <div class="form-group col-xs-12">
+                <label>Phần trăm khuyến mại:</label>
+                <input type="text" class="col-xs-8 form-control" required name="PhanTramKM" value="@Model.PhanTramKM" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Trạng thái:</label>
+                <select name="PhongBanID" class="form-control">
+                    <option value="">Chưa xác định</option>
+                    <option @(Model.TrangThai == 0 ? "selected" : "") value="0">Hết hạn</option>
+                    <option @(Model.TrangThai == 1 ? "selected" : "") value="1">Còn khuyến mại</option>
+                </select>
+
+            </div>
+           
+            <div class="form-group col-xs-6">
+                <label>Mặt hàng:</label>
+                <select name="MatHangID" class="form-control">
+
+                    <option value="">Chưa xác định</option>
+                    @foreach (var item in db.MatHangs)
+                    {
+                        <option @(Model.MatHangID == item.MatHangID ? "selected" : "") value="@item.MatHangID">@item.TenMatHang</option>
+                    }
+                </select>
+
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Từ ngày:</label>
+                <input type="date" required style="width:100%" class="form-control" name="_tuNgay" value="@(Model.TuNgay != null ? Model.TuNgay.Value.ToString("yyyy-MM-dd") : "")" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Đến ngày:</label>
+                <input type="date" required style="width:100%" class="form-control" name="_denNgay" value="@(Model.DenNgay != null ? Model.DenNgay.Value.ToString("yyyy-MM-dd") : "")" />
+            </div>
+            <div class="col-xs-12" style="margin:20px">
+                <input class="pull-right btn btn-success" type="submit" value="Lưu thông tin" />
+
+            </div>
+        </form>
+    </div>
+</div>

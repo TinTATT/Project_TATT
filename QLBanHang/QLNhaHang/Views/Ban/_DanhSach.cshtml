@@ -1,0 +1,143 @@
+﻿@model IEnumerable<QLNhaHang.Models.Ban>
+@{ 
+    QLNhaHang.Models.QLNhaHangEntities db = new QLNhaHang.Models.QLNhaHangEntities();
+    var nguoidung = db.NguoiDungs.FirstOrDefault();
+}
+
+@if (Model != null && Model.Count() > 0)
+{
+
+      <div class="table tbl-ban" style="table-layout:fixed;" data-id="idBan">
+          @foreach (var item in Model)
+          {
+              if (item.TrangThai == EnumTrangThaiBan.CONGUOI)
+              {
+                  <button  class="btn btn-success co-nguoi" style="margin-right:10px;" data-id="@item.BanID"><i class="fa fa-cutlery"></i> @item.TenBan</button>
+              }
+              else
+              {
+                  <button class="btn btn-info trong" data-toggle="modal"  style="margin-right:10px;"  data-id="@item.BanID"><i class="fa fa-cutlery"></i> @item.TenBan</button>
+              }
+          }
+      </div>
+
+}
+else
+{
+    <li class="list-group-item list-ban">
+       <table class="table tbl-ban" style="table-layout:fixed;">
+       <tbody>
+           <tr>
+               <td style="color:#b1aeae; text-align:center; font-size:16px;">Không có bàn</td>
+           </tr>
+       </tbody>    
+       </table>
+    </li>
+}
+
+<!-- Modal chọn bàn -->
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="">Mở bàn</h3>
+            </div>
+            <div class="modal-body" style="padding-left:70px;padding-top:0px;">
+                <h5>Bạn có muốn chọn bàn này?</h5>
+                <div>
+                    
+                    <button type="button" class="btn  btn-success"  data-toggle="modal" data-target="#myModal" style="font-size:15px;margin-right:15px;" data-dismiss="modal" onclick="ChonBan()"><i class="fa fa-floppy-o"></i> Có</button>
+                    <button type="button" class="btn  btn-danger" data-dismiss="modal" style="font-size:15px;"><i class="fa fa-window-close "></i> Không</button>
+                </div>
+
+            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>*@
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal hóa đơn -->
+<div id="myModal" class="modal fade" role="dialog">
+    
+</div>
+<style>
+    .luachon {
+        background-color: #faf9c6;
+    }
+
+    .tbl-ban tbody {
+        border: none !important;
+    }
+
+    .tbl-ban td {
+        border: none !important;
+        text-align: justify;
+    }
+
+    .tbl-ban tbody:hover {
+        background-color: #faf9c6;
+        cursor: pointer;
+    }
+
+</style>
+
+<script>
+    var banID = null;
+    var hoadonID = null;
+    function ChonBan() {
+        $.ajax({
+            url: '@Url.Action("chonban", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { banID: banID },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    banTrong.removeClass("btn-info");
+                    banTrong.addClass("trong");
+                    banTrong.addClass("btn-success");
+                    banTrong.removeClass("co-nguoi");
+                    //alert(banID)
+                    $('#myModal').load('/ban/hoadon?id=' + banID, function (e) { $('#myModal').modal('show'); });
+
+                }
+            }
+        });
+    }
+
+
+    $(document).on("click", ".co-nguoi", function () {
+        var obj = $(this);
+        $('#myModal').load('/ban/hoadon?id=' + obj.attr("data-id"), function (e) { $('#myModal').modal('show'); });
+    });
+    var banTrong;
+    $(document).on("click", ".trong", function () {
+        var obj = $(this);
+        banID = obj.attr("data-id");
+        //obj.removeClass("btn-info");
+        //obj.addClass("trong");
+        //obj.addClass("btn-success");
+        //obj.removeClass("co-nguoi");
+        banTrong = $(this);
+        $('#myModal1').modal('show');
+    });
+    //$(document).on("click", ".dong-y", function () {
+    //    var obj = $(this);
+    //    banID = obj.attr("data-id");
+    //    banTrong.removeClass("btn-info");
+    //    banTrong.addClass("trong");
+    //    banTrong.addClass("btn-success");
+    //    banTrong.removeClass("co-nguoi");
+    //});
+
+
+
+</script>

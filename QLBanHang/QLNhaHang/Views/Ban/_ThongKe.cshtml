@@ -1,0 +1,14 @@
+﻿@model IEnumerable<HoaDon_NguoiDung>
+
+
+@foreach (var item in Model)
+{
+    <tr class="info">
+        @*<td>@item.HoaDon.HoaDonID</td>*@
+        <td>@(item.NguoiDung != null ? item.NguoiDung.HoTen : "")</td>
+        <td>@item.HoaDon.NgayTao.Value.ToString("dd/MM/yyyy")</td>
+        <td>@item.HoaDon.TongTien</td>
+        <td>@item.HoaDon.GiamTien</td>
+        <td>@item.HoaDon.ThanhToan</td>
+    </tr>
+}

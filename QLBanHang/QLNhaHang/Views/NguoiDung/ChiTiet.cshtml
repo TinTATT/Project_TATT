@@ -1,0 +1,117 @@
+﻿@model QLNhaHang.Models.NguoiDung
+@{
+    if (Session["NguoiDung"] == null)
+    {
+        Response.Redirect(Url.Action("DangNhap", "Home", new { area = "" }));
+    }
+    var nguoidung = (QLNhaHang.Models.NguoiDung)Session["NguoiDung"];
+
+}
+<style>
+    .tab-pane {
+        min-height: 130PX;
+    }
+</style>
+<div class="row">
+    <div class="col-md-3">
+
+        <!-- Profile Image -->
+        <div class="box box-primary">
+            <div class="box-body box-profile">
+                <img class="profile-user-img img-responsive img-circle" src="@(Model.AnhDaiDien != null ? Model.AnhDaiDien : "/Content/LTE/dist/img/avatar.png")" alt="User profile picture">
+
+                <h3 class="profile-username text-center">@Model.HoTen</h3>
+
+               
+
+                <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                        <b>Ngày sinh</b> <a class="pull-right">@(Model.NgaySinh != null ? Model.NgaySinh.Value.ToString("dd/MM/yyyy") : "")</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Giới tính</b> <a class="pull-right">@(Model.GioiTinh == 1 ? "Nam" : (Model.GioiTinh == 0 ? "Nữ" : "Chưa xác định"))</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Địa chỉ</b> <a class="pull-right">@Model.DiaChi</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Số điện thoại</b> <a class="pull-right">@Model.SoDienThoai</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>E-Mail</b> <a class="pull-right">@Model.Email</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Tài khoản</b> <a class="pull-right">@Model.TenDangNhap</a>
+                    </li>
+                    <li class="list-group-item">
+                        @{
+                            string ns = "";
+                            switch (Model.NhomQuyenID)
+                            {
+                                case 1: ns = "Nhân sự"; break;
+                                case 2: ns = "Cán bộ phòng QLNS"; break;
+                                case 3: ns = "Lãnh đạo phòng QLNS"; break;
+                                case 4: ns = "Quản trị"; break;
+                                default: ns = "Chưa phân quyền"; break;
+
+                            }
+                        }
+
+                        <b>Nhóm quyền</b> <a class="pull-right">@ns</a>
+                    </li>
+
+                </ul>
+                @if (nguoidung.NhomQuyenID != 1 || nguoidung.NguoiDungID == Model.NguoiDungID)
+                {
+                    <a href="@Url.Action("CapNhat", "NguoiDung", new { id=Model.NguoiDungID})" class="btn btn-primary btn-block"><b>Chỉnh sửa thông tin cá nhân</b></a>
+                }
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <!-- About Me Box -->
+       
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+        <div class="nav-tabs-custom">
+            @*<ul class="nav nav-tabs">
+                <li class="active"><a href="#SoYeuLyLich" data-toggle="tab" aria-expanded="true">Sơ yếu lý lịch</a></li>
+                <li class=""><a href="#HoatDongDangDoanQuanNgu" data-toggle="tab" aria-expanded="false">Hoạt động Đảng/Đoàn/Quân Ngũ</a></li>
+                <li class=""><a href="#QuanHeGiaDinh" data-toggle="tab" aria-expanded="false">Quan hệ gia đình</a></li>
+                <li class=""><a href="#QuaTrinhCongTac" data-toggle="tab" aria-expanded="false">Quá trình công tác</a></li>
+
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="SoYeuLyLich">
+
+                    @Html.Raw((Model.SoYeuLyLich != null ? Model.SoYeuLyLich.Replace("\r\n", "<br>") : ""))
+                    <!-- /.post -->
+                </div>
+
+                <div class="tab-pane " id="HoatDongDangDoanQuanNgu">
+
+                    @Html.Raw((Model.HoatDongDangDoanQuanNgu != null ? Model.HoatDongDangDoanQuanNgu.Replace("\r\n", "<br>") : ""))
+                    <!-- /.post -->
+                </div>
+
+                <div class="tab-pane " id="QuanHeGiaDinh">
+
+                    @Html.Raw((Model.QuanHeGiaDinh != null ? Model.QuanHeGiaDinh.Replace("\r\n", "<br>") : ""))
+                    <!-- /.post -->
+                </div>
+                <div class="tab-pane " id="QuaTrinhCongTac">
+
+                    @Html.Raw((Model.QuaTrinhCongTac != null ? Model.QuaTrinhCongTac.Replace("\r\n", "<br>") : ""))
+                    <!-- /.post -->
+                </div>
+
+            </div>*@
+        </div>
+
+
+    </div>
+
+
+</div>

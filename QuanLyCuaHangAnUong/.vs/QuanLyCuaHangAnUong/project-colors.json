@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8d69e6a9-aaa9-405e-90c1-47fe49db142d": {
+      "ProjectGuid": "8d69e6a9-aaa9-405e-90c1-47fe49db142d",
+      "DisplayName": "QuanLyCuaHangAnUong",
+      "ColorIndex": 0
+    },
+    "38f99b30-55d3-4546-a585-ce0aebdf8cc8": {
+      "ProjectGuid": "38f99b30-55d3-4546-a585-ce0aebdf8cc8",
+      "DisplayName": "BussinessLogicLayer_BLL",
+      "ColorIndex": 1
+    },
+    "d9836cae-c47f-47b3-b60b-ac972eb89b51": {
+      "ProjectGuid": "d9836cae-c47f-47b3-b60b-ac972eb89b51",
+      "DisplayName": "DataAccessLayer_DAL",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,0 +1,36 @@
+F:\Đồ án chuyên ngành\AppDatBan\DAO\bin\Debug\DAO.dll
+F:\Đồ án chuyên ngành\AppDatBan\DAO\bin\Debug\DAO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+F:\Đồ án chuyên ngành\AppDatBan\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\Đồ án chuyên ngành\AppDatBan\DAO\obj\Debug\DAO.dll
+F:\Đồ án chuyên ngành\AppDatBan\DAO\obj\Debug\DAO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\DAO\bin\Debug\DTO.dll
+F:\Đồ án chuyên ngành\AppDatBan\DAO\bin\Debug\DTO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\bin\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\bin\Debug\DAO.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\obj\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\DAO\obj\Debug\DAO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\bin\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\bin\Debug\DAO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.pdb
+F:\HDD\QuanLyCuaHangAnUong\DAO\bin\Debug\DAO.dll
+F:\HDD\QuanLyCuaHangAnUong\DAO\bin\Debug\DAO.pdb
+F:\HDD\QuanLyCuaHangAnUong\DAO\bin\Debug\DTO.dll
+F:\HDD\QuanLyCuaHangAnUong\DAO\bin\Debug\DTO.pdb
+F:\HDD\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+F:\HDD\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\HDD\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.csproj.CopyComplete
+F:\HDD\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.dll
+F:\HDD\QuanLyCuaHangAnUong\DAO\obj\Debug\DAO.pdb

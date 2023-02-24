@@ -1,0 +1,44 @@
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\BUS.dll
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\BUS.pdb
+F:\Đồ án chuyên ngành\AppDatBan\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+F:\Đồ án chuyên ngành\AppDatBan\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+F:\Đồ án chuyên ngành\AppDatBan\BUS\obj\Debug\BUS.dll
+F:\Đồ án chuyên ngành\AppDatBan\BUS\obj\Debug\BUS.pdb
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\DAO.dll
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\DTO.dll
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\DAO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\BUS\bin\Debug\DTO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\BUS.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\BUS.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\DAO.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\obj\Debug\BUS.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\BUS\obj\Debug\BUS.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\BUS.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\BUS.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\DAO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\DAO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.pdb
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\BUS.dll
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\BUS.pdb
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\DAO.dll
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\DTO.dll
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\DAO.pdb
+F:\HDD\QuanLyCuaHangAnUong\BUS\bin\Debug\DTO.pdb
+F:\HDD\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+F:\HDD\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+F:\HDD\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.csproj.CopyComplete
+F:\HDD\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.dll
+F:\HDD\QuanLyCuaHangAnUong\BUS\obj\Debug\BUS.pdb

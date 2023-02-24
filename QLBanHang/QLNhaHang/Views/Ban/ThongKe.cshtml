@@ -1,0 +1,83 @@
+﻿
+<link rel="stylesheet" href="~/Libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
+<script src="~/Libs/bootstrap-datetimepicker/js/moment-with-locales.js"></script>
+<script src="~/Libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div>
+    <div class="content-header" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;">
+        <div class="col-xs-12">
+            <div class="col-xs-1" style="padding-left:15px;padding-right:0px;font-size:16px;padding-top:5px;">
+                 <span>Từ ngày:</span>
+            </div>
+            <div class="col-xs-4" style="padding-right:50px;">
+                @*<input type="date" data-date-format="DD/MM/YYYY"  class="form-control" name="_TuNgay" value="@ViewBag.tuNgay" />*@
+                <div class="ctr-datetime input-group">
+                    <input class="form-control" type='text' name="_TuNgay" value="@ViewBag.tuNgay" />
+                    <span class="input-group-addon" style="padding: 3px 11px;"><i class="fa fa-calendar "></i></span>
+                </div>
+
+            </div>
+            <div class="col-xs-1" style="padding-left:15px;padding-right:0px;font-size:16px;padding-top:5px;">
+                <span>Đến ngày:</span>
+            </div>
+            <div class="col-xs-4" style="padding-right:50px;">
+                @*<input type="date"  data-date-format="DD/MM/YYYY" class="form-control" name="_DenNgay" value="@ViewBag.denNgay" />*@
+
+                <div class="ctr-datetime input-group">
+                    <input class="form-control" type='text' name="_DenNgay" value="@ViewBag.denNgay" />
+                    <span class="input-group-addon" style="padding: 3px 11px;"><i class="fa fa-calendar "></i></span>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-sm btn-success" onclick="ThongKe()"><i class="fa fa-search"></i> Thống kê</a>
+            </div>
+        </div>
+
+        <div class="content" style="padding-left: 0px;padding-right: 0px;padding-top: 50px;">
+            <div class="col-xs-12" style="padding-left:0px;padding-right:0px;">
+                <table class="table table-bordered">
+                    <thead>
+
+                        <tr class="success">
+                            @*<th>Mã Hóa Đơn</th>*@
+                            <th>Người Lập</th>
+                            <th>Thời Gian</th>
+                            <th>Tổng(₫)</th>
+                            <th>Giảm Tiền(%)</th>
+                            <th>Thanh Toán(₫)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="danhSach">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        var InitDateTimePicker = function (ClassName) {
+            $('.' + ClassName).datetimepicker({
+                format: "DD/MM/YYYY"
+            }).on("dp.change", function (e) {
+                $('#frm-capnhat').formValidation('updateStatus', 'dteNgayDang', 'NOT_VALIDATED').formValidation('validateField', 'dteNgayDang');
+            });
+        }
+        InitDateTimePicker("ctr-datetime");
+
+        ThongKe()
+    });
+
+    function ThongKe()
+    {
+        $("#danhSach").html('<tr><td colspan=\"6\">Loading...</td></tr>');
+        $("#danhSach").load('@Url.Action("DanhSachThongKe","Ban", new { area = ""})?_TuNgay=' + encodeURI($("[name=_TuNgay]").val()) + '&_DenNgay=' + encodeURI($("[name=_DenNgay]").val()));
+    }
+</script>
+
+
+

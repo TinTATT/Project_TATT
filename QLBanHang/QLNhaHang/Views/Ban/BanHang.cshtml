@@ -1,0 +1,94 @@
+﻿@model IEnumerable<QLNhaHang.Models.KhuVuc>
+@{ 
+  
+    var nd = (QLNhaHang.Models.NguoiDung)Session["NguoiDung"];
+    string dmKhuVuc = "";
+    QLNhaHang.Models.KhuVuc dmKhuV = (QLNhaHang.Models.KhuVuc)ViewBag.dmKhuV;
+}
+
+<style>
+
+</style>
+<div class="row">
+    <div class="col-md-3">
+
+        <!-- Profile Image -->
+        <div class="box box-success box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Khu Vực</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table class="table tbl-khuvuc">
+                    @if (Model != null && Model.Count() > 0)
+                    {
+                        dmKhuVuc = Model.FirstOrDefault().KhuVucID.ToString(); ;
+                        foreach (var item in Model)
+                        {
+                            <tr data-id="@item.KhuVucID" data-name="@item.TenKhuVuc"><td>@item.TenKhuVuc</td></tr>
+                        }
+                    }
+
+                </table>
+
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+
+    <!-- /.col -->
+
+    <div class="col-md-9">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Bàn</h3>
+            </div>
+            <div class="box-body">
+                <div class="btn-group" style="width: 100%; margin-bottom: 10px;" id="menungang">
+                    <!--<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>-->
+                    <ul class="nav nav-pills">
+                        <li class="ban">
+                            <table class="table tbl-ban" style="table-layout:fixed;line-height: 40px;"></table>
+                        </li>
+                    </ul>
+                </div>
+              
+                <!-- /input-group -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+<style>
+    .luachon {
+        background-color: #faf9c6;
+    }
+
+    .tbl-khuvuc td {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .tbl-khuvuc tr:hover {
+        background-color: #faf9c6;
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".tbl-khuvuc tr").click(function () {
+            var obj = $(this);
+            $(".tbl-khuvuc").find("tr").removeClass("luachon");
+            obj.addClass("luachon")
+            
+            $(".ban").load("/projects/" + obj.attr("data-id"));
+           
+        });
+        $("[data-id='@dmKhuV.KhuVucID']").click();
+    })
+</script>

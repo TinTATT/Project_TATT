@@ -1,0 +1,294 @@
+﻿@model HoaDon_NguoiDung
+
+@{ 
+    var chiTietHoaDons = (IEnumerable<ChiTietHoaDon_MatHang>)ViewBag.chiTietHoaDons;
+    var nhomHangs = (IEnumerable<NhomHang>)ViewBag.nhomHangs;
+}
+
+<style>
+    .info:hover{
+        cursor:pointer;
+    }
+</style>
+<div class="modal-dialog" style="width: 100%;height: 100%;margin: 0;padding: 0;">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="height: auto;min-height: 100%;border-radius: 0;">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Hóa đơn bàn @Model.HoaDon.BanID</h4>
+        </div>
+        <div class="modal-body col-md-12 " style="border-bottom: 1px solid #e5e5e5;">
+            <div class="col-md-12 clearfix">
+                <div class="col-md-3 clearfix">
+                    <h5>Nhóm Món</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="success">
+                                <th>Tên Món</th>
+                                <th>Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (nhomHangs != null && nhomHangs.Count() > 0)
+                            {
+                                int? loaiHangId = null;
+                                foreach (var item in nhomHangs)
+                                {
+                                    if (item.MatHang.LoaiHangID != loaiHangId)
+                                    {
+                                        <tr class="success" style="font-weight:bold;">
+                                            <td colspan="2">@(item.LoaiHang != null ? item.LoaiHang.TenLoaiHang : "")</td>
+                                        </tr>
+                                    }
+                                    <tr class="info mon-an" data-id="@(item.MatHang != null ? item.MatHang.MatHangID.ToString() : "")">
+                                        <td>@(item.MatHang != null ? item.MatHang.TenMatHang : "")</td>
+                                        <td>@(item.MatHang != null && item.MatHang.Gia != null ? item.MatHang.Gia.Value.ToString("#,###.##") : "")</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 clearfix">
+                    <h5>Chi Tiết Hóa Đơn</h5>
+                    <table class="table table-bordered" id="chiTietHoaDon">
+                        <thead>
+                            <tr class="success">
+                                <th class="text-center">Tên Món</th>
+                                <th class="text-center">Giá</th>
+                                <th class="text-center">Số Lượng</th>
+                                @*<th class="text-center">Khuyến Mãi</th>*@
+                                <th class="text-center">Thành Tiền</th>
+                                <th class="text-center">Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (chiTietHoaDons != null && chiTietHoaDons.Count() > 0)
+                            {
+                                foreach (var item in chiTietHoaDons)
+                                {
+                                    <tr class="info" data-id="@item.MatHang.MatHangID" data-chitietid="@item.ChiTietHoaDon.ChiTietHoaDonID">
+                                        <td class="text-center">@(item.MatHang != null ? item.MatHang.TenMatHang : "")</td>
+                                        <td class="text-center">@(item.MatHang != null && item.MatHang.Gia != null ? item.MatHang.Gia.Value.ToString("#,###.##") : "")</td>
+                                        <td class="so-luong text-center">@(item.ChiTietHoaDon != null && item.ChiTietHoaDon.SoLuong != null ? item.ChiTietHoaDon.SoLuong.Value.ToString("#,###.##") : "")</td>
+                                        @*<td class="text-right">@(item.ChiTietHoaDon != null && item.ChiTietHoaDon.PhanTramKM != null ? item.ChiTietHoaDon.PhanTramKM.Value.ToString("#,###.##") : "-")</td>*@
+                                        <td class="text-center thanh-tien">@(item.ChiTietHoaDon != null && item.ChiTietHoaDon.ThanhTien != null ? item.ChiTietHoaDon.ThanhTien.Value.ToString("#,###.##") : "")</td>
+                                        @*<td class="text-center thanh-tien">@(item.ChiTietHoaDon != null && item.ChiTietHoaDon.ThanhTien != null ? (((item.KhuyenMai.PhanTramKM != null ? (100 - (float)item.KhuyenMai.PhanTramKM.Value)/100 : 1) * item.MatHang.Gia.Value).ToString("#,###")) : "")</td>*@
+                                        <td class="text-center">
+                                            <a class="btn btn-default cong"><i class="fa fa-plus"></i></a>
+                                            <a class="btn btn-default tru"><i class="fa fa-minus"></i></a>
+                                            <a class="btn btn-default xoa"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3 clearfix">
+                    <form id="frm-thanhtoan">
+                        <input type="hidden" name="hoadonID" value="@Model.HoaDon.HoaDonID"/>
+                        <label>Nhân Viên:</label>
+                        <input class="form-control" value="@(Model.NguoiDung != null ? Model.NguoiDung.HoTen : "")" disabled />
+                        <label>Ngày Lập</label>
+                        <input class="form-control" value="@(Model.HoaDon != null && Model.HoaDon.NgayTao != null ? Model.HoaDon.NgayTao.Value.ToString("HH:mm dd/MM/yyy") : "")" disabled />
+                        <label>Tổng Tiền</label>
+                        <input class="form-control" name="tongTien" value="@(Model.HoaDon != null && Model.HoaDon.TongTien != null ? Model.HoaDon.TongTien.Value.ToString("#,###.##") : "")" disabled />
+                        <label>Giảm Tiền</label>
+                        <input class="form-control" name="giamTien" value="" />
+                        <label>Khách Đưa</label>
+                        <input class="form-control" name="khachDua" value="" />
+                        <label>Thanh Tóan</label>
+                        <input class="form-control" name="thanhToan" value="@(Model.HoaDon != null && Model.HoaDon.ThanhToan != null ? Model.HoaDon.ThanhToan.Value.ToString("#,###.##") : "")" />
+                        <label>Trả Lại</label>
+                        <input class="form-control" name="traLai" value="" />
+                    </form>
+                   
+                </div>
+
+                    
+            </div>
+        </div>
+        <div class="modal-footer clearfix">
+            <button type="button" class="btn btn-success" data-dismiss="modal" style="margin-top:10px;" id="btn-luu"><i class="fa fa-money"></i> Thanh Toán</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-top:10px;"><i class="fa fa-window-close-o"></i> Đóng</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    $("[name=giamTien]").on("keyup", function () {
+        var tongTien = Number($("[name=tongTien]").val().replace(/,/g, ""));
+        var khachDua = Number($("[name=khachDua]").val());
+        var thanhToan = tongTien * (100 - Number($('[name=giamTien]').val())) / 100;
+        $('[name=thanhToan]').val(thanhToan);
+        $('[name=traLai]').val(khachDua - thanhToan);
+
+    });
+    $("[name=khachDua]").on("keyup", function () {
+        var tongTien = Number($("[name=tongTien]").val().replace(/,/g, ""));
+        var khachDua = Number($("[name=khachDua]").val());
+        var thanhToan = tongTien * (100 - Number($('[name=giamTien]').val())) / 100;
+        $('[name=thanhToan]').val(thanhToan);
+        $('[name=traLai]').val(khachDua - thanhToan);
+        
+    })
+
+
+    $(".mon-an").on("click", function () {
+        var obj = $(this);
+        $.ajax({
+            url: '@Url.Action("chonmon", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { hoaDonID: '@Model.HoaDon.HoaDonID', matHangID: obj.attr("data-id") },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    if(data.themMoi == 1)
+                    {
+                        $("#chiTietHoaDon").find('tbody').append(data.chonMon);
+                        $('[name=tongTien]').val(data.tongGiaHoaDon);
+                    }
+                    else {
+                        $('[data-id=' + data.matHangID + ']').find('.so-luong').text(data.chonMon);
+                        $('[name=tongTien]').val(data.tongGiaHoaDon);
+                    }
+                }
+            }
+        });
+
+    });
+    $(document).on("click", ".cong", function () {
+        var obj = $(this);
+        $.ajax({
+            url: '@Url.Action("congmon", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { chiTietHoaDonID: obj.parent().parent().attr("data-chitietid") },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    obj.parent().parent().find('.so-luong').text(data.soLuong);
+                    obj.parent().parent().find('.thanh-tien').text(data.thanhTien);
+                    $('[name=tongTien]').val(data.tongGiaHoaDon);
+                }
+                else {
+                    alert(data.msg);
+                }
+            }
+        });
+
+    });
+    $(document).on("click", ".tru", function () {
+        var obj = $(this);
+        $.ajax({
+            url: '@Url.Action("giammon", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { chiTietHoaDonID: obj.parent().parent().attr("data-chitietid") },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    console.log(obj.parent().parent().find('.so-luong'))
+                    obj.parent().parent().find('.so-luong').text(data.soLuong);
+                    obj.parent().parent().find('.thanh-tien').text(data.thanhTien);
+                    $('[name=tongTien]').val(data.tongGiaHoaDon);
+                }
+                else
+                {
+                    alert(data.msg);
+                }
+            }
+        });
+
+    });
+    @*$(".xoa").on("click", function () {
+        var obj = $(this);
+        $.ajax({
+            url: '@Url.Action("xoamon", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { chiTietHoaDonID: obj.parent().parent().attr("data-chitietid") },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    obj.parent().parent().remove();
+                }
+                else {
+                   
+                }
+            }
+        });
+
+    });*@
+
+    $(document).on("click", ".xoa", function () {
+        var obj = $(this);
+        $.ajax({
+            url: '@Url.Action("xoamon", "ban", new { area ="" })',
+            type: 'GET',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            //processData: false,
+            async: false,
+            cache: false,
+            data: { chiTietHoaDonID: obj.parent().parent().attr("data-chitietid") },
+            success: function (data) {
+                if (data.kq == "ok") {
+                    $('[name=tongTien]').val(data.tongGiaHoaDon);
+                    obj.parent().parent().remove();
+                }
+                else {
+
+                }
+            }
+        });
+
+    });
+    $('#btn-luu').on("click", function () {
+        $.ajax({
+            url: '@Url.Action("capnhathoadon", "ban", new { area = "" })',
+            type: 'POST',
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            contentType: false,
+            processData: false,
+            async: false,
+            cache: false,
+            data: new FormData(document.getElementById('frm-thanhtoan')),
+            success: function (data) {
+                if (data.kq == "ok") {
+                    alert(data.msg);
+                    window.location.href = '/ban/banhang'
+                }
+                else {
+                    alertify.error(data.msg);
+                    document.getElementById("btn-luu").disabled = false;
+                    $("#btn-luu").removeClass("disabled");
+                }
+            }
+        });
+    })
+</script>

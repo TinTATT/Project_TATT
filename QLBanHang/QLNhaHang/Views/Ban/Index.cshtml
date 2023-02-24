@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Ban>
+@{ 
+    var stt = 1;
+    QLNhaHang.Models.QLNhaHangEntities db = new QLNhaHang.Models.QLNhaHangEntities();
+}
+<h3>Danh sách bàn</h3>
+<style>
+    #example1_wrapper {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+
+    #example1_filter label input {
+        WIDTH: 476PX;
+    }
+
+    input[type=search] {
+        -webkit-appearance: textarea;
+    }
+
+    th.sorting {
+        width: 90px !important;
+    }
+
+    th.sorting_asc, th.sorting_desc {
+        width: 90px !important;
+    }
+</style>
+
+<a class="btn btn-sm btn-success" style="margin-bottom:20px" href="@Url.Action("CapNhat", "Ban")">Thêm mới</a>
+
+
+<table class="table-bordered col-xs-12">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên Bàn</th>
+            <th>Trạng Thái</th>
+            <th style="width:130PX">Chức năng</th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(stt++)</td>
+                <td>@item.TenBan</td>
+                <td>@(item.TrangThai == 0 ? "Trống" :"Có Người")</td>
+                <th style="width:130PX;text-align:center">
+                    <a href="@Url.Action("capnhat", "ban", new { id = item.BanID})" class="btn  fa fa-check-circle btn-primary"> Sửa</a>
+                    <a onclick="Xoa('@item.BanID')" class="btn fa fa-trash-o btn-danger">Xóa</a>
+
+                </th>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+<script>
+    function Xoa(id) {
+        var r = confirm("Bạn có chắc chắn muốn xóa!");
+        if (r == true) {
+            window.location.href = "@Url.Action("Xoa", "Ban", new { area = "" })?id=" + id;
+        } else {
+
+        }
+
+    }
+</script>
+<link href="~/Content/LTE/plugins/datatables/jquery.dataTables.css" rel="stylesheet" />
+<script src="~/Content/LTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script>
+    $("table").DataTable();
+</script>

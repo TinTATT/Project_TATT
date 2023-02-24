@@ -1,0 +1,96 @@
+﻿using DTO;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAO
+{
+    public class NhanVien_DAO
+    {
+        static SqlConnection conn;
+
+
+
+        public static List<NhanVien_DTO> LayNhanVien()
+        {
+            List<NhanVien_DTO> lstNV = new List<NhanVien_DTO>();
+            conn = DataProvider.MoKetNoi();
+            string cauTruyVan = "Select * From NHANVIEN";
+            DataTable dt = DataProvider.LayDataTable(cauTruyVan, conn);
+            if (dt.Rows.Count == 0)
+                return null;
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                
+                NhanVien_DTO NV = new NhanVien_DTO();
+
+                NV.MaNV = dt.Rows[i]["MaNV"].ToString();
+                NV.TenNV = dt.Rows[i]["TenNV"].ToString();
+                NV.DiaChi = dt.Rows[i]["DiaChi"].ToString();
+                NV.NgaySinh = dt.Rows[i]["NgaySinh"].ToString();
+                NV.GioiTinh = dt.Rows[i]["GioiTinh"].ToString();
+                NV.SDT = int.Parse(dt.Rows[i]["SDT"].ToString());
+                NV.MaTK = int.Parse(dt.Rows[i]["MaTK"].ToString());
+                NV.ChucVu = dt.Rows[i]["ChucVu"].ToString();
+
+                lstNV.Add(NV);
+            }
+            DataProvider.DongKetNoi(conn);
+            return lstNV;
+        }
+
+        public static List<NhanVien_DTO> TimNV(string tenNV)
+        {
+            string chuoiTruyVan = "Select * From NHANVIEN where TenNV like N'"+ tenNV+ "'";
+            conn = DataProvider.MoKetNoi();
+            DataTable dt = DataProvider.LayDataTable(chuoiTruyVan, conn);
+            if (dt.Rows.Count == 0)
+                return null;
+
+            List<NhanVien_DTO> lstNV = new List<NhanVien_DTO>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                NhanVien_DTO NV = new NhanVien_DTO();
+
+                NV.MaNV = dt.Rows[i]["MaNV"].ToString();
+                NV.TenNV = dt.Rows[i]["TenNV"].ToString();
+                NV.DiaChi = dt.Rows[i]["DiaChi"].ToString();
+                NV.NgaySinh = dt.Rows[i]["NgaySinh"].ToString();
+                NV.GioiTinh = dt.Rows[i]["GioiTinh"].ToString();
+                NV.SDT = int.Parse(dt.Rows[i]["SDT"].ToString());
+                NV.MaTK = int.Parse(dt.Rows[i]["MaTK"].ToString());
+                NV.ChucVu = dt.Rows[i]["ChucVu"].ToString();
+
+                lstNV.Add(NV);
+            }
+            DataProvider.DongKetNoi(conn);
+            return lstNV;
+        }
+
+        public static bool ThemNV(NhanVien_DTO nv)
+        {
+            string chuoiTruyVan = string.Format("INSERT INTO tblNhanVien(MaNV,TenNV,DiaChi,NgaySinh,GioiTinh,SDT,ChucVu) VALUES (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}'", nv.MaNV,nv.TenNV,nv.DiaChi,nv.NgaySinh,nv.GioiTinh,nv.SDT,nv.ChucVu);
+            
+            conn = DataProvider.MoKetNoi();
+            try
+            {
+                DataProvider.ThucThiTruyVanNonQuery(chuoiTruyVan, conn);
+                DataProvider.DongKetNoi(conn);
+                return true;
+            }
+            catch (Exception)
+            {
+                DataProvider.DongKetNoi(conn);
+                return false;
+            }
+        }
+
+
+
+    }  
+ }

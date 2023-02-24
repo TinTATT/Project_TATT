@@ -1,0 +1,83 @@
+﻿@model QLNhaHang.Models.NguoiDung
+@{
+    QLNhaHang.Models.QLNhaHangEntities db = new QLNhaHang.Models.QLNhaHangEntities();
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">@(Model.NguoiDungID == 0 ? "Thêm mới nhân sự" : "Cập nhật thông tin nhân sự")</div>
+    <div class="panel-body">
+        <form style="margin-top:20px;display:inline-block" class="col-xs-12" method="post" enctype="multipart/form-data" action="@Url.Action("capnhat", "NguoiDung", new { area = "" })">
+
+            <input type="hidden" name="NguoiDungID" value="@Model.NguoiDungID" />
+            <div class="form-group col-xs-6">
+                <label>Họ tên:</label>
+                <input type="text" class="col-xs-8 form-control" required name="HoTen" value="@Model.HoTen" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Tài khoản:</label>
+                <input type="text" class="col-xs-8 form-control" required name="TenDangNhap" value="@Model.TenDangNhap" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Mật khẩu:</label>
+                <input type="password" class="col-xs-8 form-control" required name="MatKhau" value="@Model.MatKhau" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Ngày sinh:</label>
+                <input type="date" required style="width:100%" class="form-control" name="_NgaySinh" value="@(Model.NgaySinh != null ? Model.NgaySinh.Value.ToString("yyyy-MM-dd") : "")" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Giới tính:</label>
+                <select name="GioiTinh" class="form-control">
+                    <option value="">Chọn giới tính</option>
+                    <option @(Model.GioiTinh == 1 ? "selected" : "") value="1">Nam</option>
+                    <option @(Model.GioiTinh == 0 ? "selected" : "") value="0">Nữ</option>
+                </select>
+            </div>
+
+            <div class="form-group col-xs-6">
+                <label>Địa chỉ:</label>
+                <input type="text" class="col-xs-8 form-control" name="DiaChi" value="@Model.DiaChi" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Email:</label>
+                <input type="text" class="col-xs-8 form-control" name="Email" value="@Model.Email" />
+            </div>
+            <div class="form-group col-xs-6">
+                <label>Số điện thoại:</label>
+                <input type="text" class="col-xs-8 form-control" name="SoDienThoai" value="@Model.SoDienThoai" />
+            </div>
+        
+
+            <div class="form-group col-xs-6">
+                <label>Nhóm quyền:</label>
+                <select name="NhomQuyenID" class="form-control">
+
+
+                    <option value="">Chưa xác định</option>
+                    <option @(Model.NhomQuyenID == 1 ? "selected" : "") value="1">Nhân sự</option>
+                    <option @(Model.NhomQuyenID == 2 ? "selected" : "") value="2">Cán bộ phòng quản lý nhân sự</option>
+                    <option @(Model.NhomQuyenID == 3 ? "selected" : "") value="3">Lãnh đạo phòng quản lý nhân sự</option>
+                    <option @(Model.NhomQuyenID == 4 ? "selected" : "") value="4">Quản trị viên</option>
+
+                </select>
+
+            </div>
+            <div class="form-group col-xs-6">
+                <label style="width:100%">Ảnh đại diện :</label>
+                <input type="file" name="AnhDaiDien" class="col-xs-12" />
+
+            </div>
+            <div class="form-group col-xs-6">
+
+                @if (Model.AnhDaiDien != null)
+                {
+                    <img src="@Model.AnhDaiDien" style="height:200px" />
+                }
+            </div>
+            <div class="col-xs-12" style="margin:20px">
+                <input class="pull-right btn btn-success" type="submit" value="Lưu thông tin" />
+
+            </div>
+        </form>
+    </div>
+</div>

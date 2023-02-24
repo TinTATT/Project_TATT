@@ -1,0 +1,208 @@
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\ApplicationInsights.config
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\csc.exe
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\vbc.exe
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\VBCSCompiler.exe
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\QLNhaHang.dll.config
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\QLNhaHang.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\QLNhaHang.pdb
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\EntityFramework.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\EntityFramework.SqlServer.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.Web.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.ApplicationInsights.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Newtonsoft.Json.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Helpers.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Mvc.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Razor.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.Deployment.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.Razor.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\EntityFramework.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\EntityFramework.SqlServer.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.Web.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.ApplicationInsights.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Newtonsoft.Json.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Razor.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.Deployment.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Webpages.Razor.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Helpers.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Mvc.xml
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\obj\Debug\QLNhaHang.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\obj\Debug\QLNhaHang.pdb
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\Microsoft.CSharp.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Configuration.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Data.DataSetExtensions.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Data.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Drawing.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.EnterpriseServices.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Runtime.Serialization.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Security.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.ApplicationServices.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.DynamicData.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Entity.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Extensions.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Web.Services.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Xml.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\bin\System.Xml.Linq.dll
+C:\Users\bienphongvnn\Documents\Visual Studio 2015\Projects\QLNhaHang\obj\Debug\QLNhaHang.csprojResolveAssemblyReference.cache
+E:\QLBanHang\QLNhaHang\bin\ApplicationInsights.config
+E:\QLBanHang\QLNhaHang\bin\QLNhaHang.dll.config
+E:\QLBanHang\QLNhaHang\bin\QLNhaHang.dll
+E:\QLBanHang\QLNhaHang\bin\QLNhaHang.pdb
+E:\QLBanHang\QLNhaHang\bin\EntityFramework.dll
+E:\QLBanHang\QLNhaHang\bin\EntityFramework.SqlServer.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.Agent.Intercept.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.DependencyCollector.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.Web.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.WindowsServer.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.ApplicationInsights.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.CSharp.dll
+E:\QLBanHang\QLNhaHang\bin\Microsoft.Web.Infrastructure.dll
+E:\QLBanHang\QLNhaHang\bin\Newtonsoft.Json.dll
+E:\QLBanHang\QLNhaHang\bin\System.ComponentModel.DataAnnotations.dll
+E:\QLBanHang\QLNhaHang\bin\System.Configuration.dll
+E:\QLBanHang\QLNhaHang\bin\System.Data.dll
+E:\QLBanHang\QLNhaHang\bin\System.dll
+E:\QLBanHang\QLNhaHang\bin\System.Drawing.dll
+E:\QLBanHang\QLNhaHang\bin\System.EnterpriseServices.dll
+E:\QLBanHang\QLNhaHang\bin\System.Runtime.Serialization.dll
+E:\QLBanHang\QLNhaHang\bin\System.Security.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.ApplicationServices.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.DynamicData.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Entity.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Helpers.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Mvc.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Razor.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Services.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Deployment.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.dll
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Razor.dll
+E:\QLBanHang\QLNhaHang\bin\System.Xml.dll
+E:\QLBanHang\QLNhaHang\bin\EntityFramework.xml
+E:\QLBanHang\QLNhaHang\bin\EntityFramework.SqlServer.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.DependencyCollector.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.Web.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.AI.WindowsServer.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.ApplicationInsights.xml
+E:\QLBanHang\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\QLBanHang\QLNhaHang\bin\Newtonsoft.Json.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Razor.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Deployment.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Razor.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Helpers.xml
+E:\QLBanHang\QLNhaHang\bin\System.Web.Mvc.xml
+E:\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.AssemblyReference.cache
+E:\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.CoreCompileInputs.cache
+E:\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.CopyComplete
+E:\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.dll
+E:\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.pdb
+E:\QLBanHang\QLNhaHang\bin\roslyn\csc.exe
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\QLBanHang\QLNhaHang\bin\roslyn\System.Collections.Immutable.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\System.Reflection.Metadata.dll
+E:\QLBanHang\QLNhaHang\bin\roslyn\vbc.exe
+E:\QLBanHang\QLNhaHang\bin\roslyn\VBCSCompiler.exe
+E:\QLBanHang\QLNhaHang\bin\roslyn\VBCSCompiler.exe.config
+F:\HDD\QLBanHang\QLNhaHang\bin\ApplicationInsights.config
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\csc.exe
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\System.Collections.Immutable.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\System.Reflection.Metadata.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\vbc.exe
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\VBCSCompiler.exe
+F:\HDD\QLBanHang\QLNhaHang\bin\roslyn\VBCSCompiler.exe.config
+F:\HDD\QLBanHang\QLNhaHang\bin\QLNhaHang.dll.config
+F:\HDD\QLBanHang\QLNhaHang\bin\QLNhaHang.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\QLNhaHang.pdb
+F:\HDD\QLBanHang\QLNhaHang\bin\EntityFramework.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\EntityFramework.SqlServer.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.Agent.Intercept.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.DependencyCollector.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.Web.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.WindowsServer.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.ApplicationInsights.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.CSharp.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.Web.Infrastructure.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\Newtonsoft.Json.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.ComponentModel.DataAnnotations.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Configuration.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Data.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Drawing.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.EnterpriseServices.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Runtime.Serialization.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Security.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.ApplicationServices.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.DynamicData.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Entity.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Helpers.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Mvc.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Razor.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Services.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Deployment.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Razor.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Xml.dll
+F:\HDD\QLBanHang\QLNhaHang\bin\EntityFramework.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\EntityFramework.SqlServer.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.DependencyCollector.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.Web.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.AI.WindowsServer.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.ApplicationInsights.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\Newtonsoft.Json.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Razor.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Deployment.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Webpages.Razor.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Helpers.xml
+F:\HDD\QLBanHang\QLNhaHang\bin\System.Web.Mvc.xml
+F:\HDD\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.AssemblyReference.cache
+F:\HDD\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.CoreCompileInputs.cache
+F:\HDD\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.csproj.CopyComplete
+F:\HDD\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.dll
+F:\HDD\QLBanHang\QLNhaHang\obj\Debug\QLNhaHang.pdb

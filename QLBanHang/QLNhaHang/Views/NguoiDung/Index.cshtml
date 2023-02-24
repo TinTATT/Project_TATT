@@ -1,0 +1,112 @@
+﻿@model   IEnumerable<QLNhaHang.Models.NguoiDung>
+@{
+        QLNhaHang.Models.QLNhaHangEntities db = new QLNhaHang.Models.QLNhaHangEntities();
+        var stt = 1;
+        if (Session["NguoiDung"] == null)
+        {
+            Response.Redirect(Url.Action("DangNhap", "Home", new { area = "" }));
+    }
+    var nguoidung = (QLNhaHang.Models.NguoiDung)Session["NguoiDung"];
+
+}
+
+<style>
+    #example1_wrapper {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+
+    #example1_filter label input {
+        WIDTH: 476PX;
+    }
+
+    input[type=search] {
+        -webkit-appearance: textarea;
+    }
+
+    th.sorting {
+        width: 90px !important;
+    }
+
+    th.sorting_asc, th.sorting_desc {
+        width: 90px !important;
+    }
+</style>
+<h2>Danh sách tất cả nhân sự </h2>
+@if (nguoidung.NhomQuyenID != 1)
+{
+    <a class="btn btn-sm btn-success" href="@Url.Action("CapNhat","NguoiDung")">Thêm mới</a>
+}
+<table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th style="max-width:30PX">STT</th>
+            <th style="width:60%">Tên người dùng</th>
+            <th style="width:90PX">Nhóm quyền</th>
+            <th style="width:230PX">Chức năng</th>
+
+        </tr>
+    </thead>
+    <tbody style="cursor:pointer" class="hovertrtt">
+        @foreach (var item in Model)
+        {
+            {
+                <tr>
+                    <td>
+                        @(stt++)
+                    </td>
+                    <td>@item.HoTen</td>
+                    <td>
+                        @{
+                            string ns = "";
+                            switch (item.NhomQuyenID)
+                            {
+                                case 1: ns = "Nhân sự"; break;
+                                case 2: ns = "Cán bộ phòng quản lý nhân sự"; break;
+                                case 3: ns = "Lãnh đạo phòng quản lý nhân sự"; break;
+                                case 4: ns = "Quản trị"; break;
+                                default: ns = "Chưa phân quyền"; break;
+
+                            }
+                        }
+                        @ns
+                    </td>
+
+                    <td style="width:150px;text-align:center">
+                        <a href="@Url.Action("ChiTiet", "NguoiDung", new { id = item.NguoiDungID})" class="btn btn-info btn-sm"><i class="fa fa-info"></i> Chi tiết</a>
+                        @if (nguoidung.NhomQuyenID != 1)
+                        {  <a href="@Url.Action("CapNhat", "NguoiDung", new { id = item.NguoiDungID})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Sửa</a>
+                        <a class="btn btn-danger btn-sm" onclick="Xoa('@item.NguoiDungID')"><i class="fa fa-trash-o"></i> Xóa</a>
+                        }
+                    </td>
+
+                </tr>
+                                }
+                            }
+    </tbody>
+
+</table>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    function Xoa(id) {
+        var r = confirm("Bạn có chắc chắn muốn xóa!");
+        if (r == true) {
+            window.location.href = "@Url.Action("Xoa", "NguoiDung", new { area = "" })?id=" + id;
+        } else {
+
+        }
+
+    }
+
+</script>
+<link href="~/Content/LTE/plugins/datatables/jquery.dataTables.css" rel="stylesheet" />
+<script src="~/Content/LTE/plugins/datatables/jquery.dataTables.min.js"></script>
+<script>
+    $("table").DataTable();
+</script>

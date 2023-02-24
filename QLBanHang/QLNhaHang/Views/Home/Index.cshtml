@@ -1,0 +1,160 @@
+﻿@{
+    if (Session["NguoiDung"] == null)
+    {
+        Response.Redirect(Url.Action("DangNhap", "Home", new { area = "" }));
+    }
+    QLNhaHang.Models.QLNhaHangEntities db = new QLNhaHang.Models.QLNhaHangEntities();
+    var nguoidung = (QLNhaHang.Models.NguoiDung)Session["NguoiDung"];
+
+}
+<style>
+    a {
+        color: #000000;
+    }
+</style>
+<section class="content">
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <a href="@Url.Action("index","NguoiDung")" style="color:#000000">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-user-circle-o"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Nhân sự</span>
+                        <span class="info-box-number">@db.NguoiDungs.Where(a => a.NhomQuyenID == 1).Count()</span>
+                    </div>
+                </a>     <!-- /.info-box-content -->
+            </div>
+
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <a href="@Url.Action("index","Ban")" style="color:#000000">
+                <span class="info-box-icon bg-red"><i class="fa fa-table"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Bàn</span>
+                    <span class="info-box-number">@db.Bans.Count()</span>
+                </div>
+                </a><!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <a href="@Url.Action("index","MatHang")" style="color:#000000">
+                <span class="info-box-icon bg-green"><i class="fa fa-cube"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Mặt hàng</span>
+                    <span class="info-box-number">@db.MatHangs.Count()</span>
+                </div>
+                </a><!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <a href="@Url.Action("banhang","Ban")" style="color:#000000">
+                    <span class="info-box-icon bg-yellow"><i class="fa fa-shopping-cart"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Bán hàng</span>
+                        <span class="info-box-number">@db.Bans.Count(x=>x.TrangThai == EnumTrangThaiBan.CONGUOI)</span>
+                    </div>
+                </a><!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <h3 class="box-title">Loại Hàng</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                @foreach (var item in db.LoaiHangs)
+                {
+
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-red">
+                            <div class="inner">
+                                <h3>@db.MatHangs.Where(a => a.LoaiHangID == item.LoaiHangID).Count()</h3>
+
+                                <p>@item.TenLoaiHang</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-cube"></i>
+                            </div>
+                            <a href="@Url.Action("index", "mathang", new { LoaiHangID= item.LoaiHangID})" class="small-box-footer">
+                                Chi tiết <i class="fa fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+
+    <div class="row">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <h3 class="box-title">Khu vực</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                @foreach (var item in db.KhuVucs)
+                {
+
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <h3>@db.Bans.Where(a => a.KhuVucID == item.KhuVucID).Count()</h3>
+
+                                <p>@item.TenKhuVuc</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-table"></i>
+                            </div>
+                            <a href="@Url.Action("index", "ban", new { KhuVucID = item.KhuVucID })" class="small-box-footer">
+                                Chi tiết <i class="fa fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- =========================================================== -->
+</section>

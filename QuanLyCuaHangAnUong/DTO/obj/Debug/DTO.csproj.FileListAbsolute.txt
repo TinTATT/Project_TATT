@@ -1,0 +1,24 @@
+F:\Đồ án chuyên ngành\AppDatBan\DTO\bin\Debug\DTO.dll
+F:\Đồ án chuyên ngành\AppDatBan\DTO\bin\Debug\DTO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\Đồ án chuyên ngành\AppDatBan\DTO\obj\Debug\DTO.dll
+F:\Đồ án chuyên ngành\AppDatBan\DTO\obj\Debug\DTO.pdb
+F:\Đồ án chuyên ngành\AppDatBan\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\obj\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\AppDatBan\DTO\obj\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\bin\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\bin\Debug\DTO.pdb
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.dll
+C:\Users\COMPUTER\Desktop\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.pdb
+F:\HDD\QuanLyCuaHangAnUong\DTO\bin\Debug\DTO.dll
+F:\HDD\QuanLyCuaHangAnUong\DTO\bin\Debug\DTO.pdb
+F:\HDD\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+F:\HDD\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\HDD\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.dll
+F:\HDD\QuanLyCuaHangAnUong\DTO\obj\Debug\DTO.pdb

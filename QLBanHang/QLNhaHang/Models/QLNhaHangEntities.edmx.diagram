@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00f24fd39683486c9e7539a7264a450f" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="QLNhaHangModel.Ban" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.ChucNang" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.ChucNang_NhomQuyen" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.KhuVuc" Width="1.5" PointX="4.75" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.KhuyenMai" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.LoaiHang" Width="1.5" PointX="0.75" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.MatHang" Width="1.5" PointX="6.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.NguoiDung" Width="1.5" PointX="4.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.NhomQuyen" Width="1.5" PointX="2.75" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.ChiTietHoaDon" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="QLNhaHangModel.HoaDon" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
